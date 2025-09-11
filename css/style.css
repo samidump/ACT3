@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f4c2c2, #e2e2e2);
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.36);
+  border-radius: 25px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(13.5px);
+  -webkit-backdrop-filter: blur(13.5px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  width: 400px;
+  padding: 2rem;
+  margin: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(128, 0, 32, 0.25);
+}
+
+.form-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #800020;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.input-group i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #a83244;
+  font-size: 1.2rem;
+}
+
+input {
+  width: 100%;
+  padding: 10px 35px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #800020;
+  box-shadow: 0 0 5px rgba(128, 0, 32, 0.5);
+}
+
+input::placeholder {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+label {
+  position: absolute;
+  left: 35px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #aaa;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label {
+  top: -10px;
+  left: 5px;
+  font-size: 0.8rem;
+  color: #800020;
+}
+
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background: #800020;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background: #a83244;
+  transform: translateY(-2px);
+}
+
+.recover {
+  text-align: right;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.recover a {
+  text-decoration: none;
+  color: #800020;
+  transition: color 0.3s ease;
+}
+
+.recover a:hover {
+  color: #a83244;
+  text-decoration: underline;
+}
+
+.or {
+  text-align: center;
+  font-size: 1rem;
+  margin: 1rem 0;
+  color: #666;
+}
+
+.icons {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.icons i {
+  color: #800020;
+  padding: 10px 15px;
+  font-size: 1.4rem;
+  border: 2px solid #e2e2e2;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 8px;
+  transition: all 0.3s ease;
+}
+
+.icons i:hover {
+  background: #800020;
+  color: #fff;
+  border-color: #800020;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.links p {
+  color: #252323;
+  font-weight: bold;
+}
+
+a {
+  color: #7e2d26;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: rgb(124, 151, 48);
+  text-decoration: underline;
+}
+
+button {
+  border: none;
+  background: none;
+  color: #800020;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+button:hover {
+  color: #a83244;
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .form-title {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 8px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+    padding: 1rem;
+    border-radius: 15px;
+  }
+
+  .form-title {
+    font-size: 1.3rem;
+  }
+
+  input {
+    font-size: 0.9rem;
+    padding: 8px 30px;
+  }
+
+  .icons i {
+    font-size: 1.2rem;
+    padding: 8px 12px;
+    margin: 0 5px;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}
