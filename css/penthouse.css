@@ -1,4 +1,3 @@
-/* ===== Base ===== */
 body {
   margin: 0;
   font-family: 'Lora', serif;
@@ -18,7 +17,6 @@ p {
   font-size: 1rem;
 }
 
-/* ===== Hero ===== */
 .hero {
   height: 100vh;
   position: relative;
@@ -46,7 +44,6 @@ p {
   margin: 15px 0;
 }
 
-/* ===== Buttons ===== */
 .btn {
   display: inline-block;
   padding: 12px 25px;
@@ -64,7 +61,6 @@ p {
   box-shadow: 0 0 15px rgba(212,175,55,0.6);
 }
 
-/* ===== Sections ===== */
 section {
   padding: 4rem 2rem;
   text-align: center;
@@ -95,7 +91,6 @@ section p {
   line-height: 1.8;
 }
 
-/* ===== Navbar ===== */
 .navbar {
   position: fixed;
   top: 0;
@@ -146,7 +141,6 @@ section p {
   color: #000;
 }
 
-/* ===== Cards ===== */
 .card-container,
 .coactor-container {
   display: flex;
@@ -198,7 +192,6 @@ section p {
   border: 4px solid #d4af37;
 }
 
-/* ===== Carousel ===== */
 #episodes h2 {
   font-size: 2.5rem;
   color: #d4af37;
@@ -268,7 +261,6 @@ section p {
   box-shadow: 0 0 15px rgba(212,175,55,0.7);
 }
 
-/* ===== Footer ===== */
 #footer {
   text-align: center;
   padding: 2rem;
