@@ -55,7 +55,7 @@ body {
 
 .input-group {
   position: relative;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.8rem; 
 }
 
 .input-group i {
@@ -78,35 +78,11 @@ input {
   transition: all 0.3s ease;
 }
 
-input:focus {
-  outline: none;
-  border-color: #f5d76e;
-  box-shadow: 0 0 5px rgba(245, 215, 110, 0.7);
-}
-
 input::placeholder {
   color: #777;
   font-size: 0.9rem;
 }
 
-label {
-  position: absolute;
-  left: 35px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-  color: #777;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-}
-
-input:focus ~ label,
-input:not(:placeholder-shown) ~ label {
-  top: -10px;
-  left: 5px;
-  font-size: 0.8rem;
-  color: #f5d76e;
-}
 
 .btn {
   display: inline-block;
@@ -264,4 +240,18 @@ button:hover {
     gap: 0.5rem;
     text-align: center;
   }
+}
+
+
+label.error {
+  position: static;       
+  margin-top: 5px;
+  color: #ff6b6b;
+  font-size: 0.85rem;
+  display: block;         
+  padding-left: 35px;     
+}
+
+.input-group input.error {
+  border-color: #ff6b6b;
 }
